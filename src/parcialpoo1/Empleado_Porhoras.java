@@ -1,24 +1,35 @@
 
 package parcialpoo1;
 
-public class Empleado_Porhoras {
-   Empleado porhoras=new Empleado("jose ",0);
-       
-       
-       
-      public void calcularsalario(int horasTrabajadas, double tarifaPorHora) {
-        porhoras.calcularsalario(horasTrabajadas, tarifaPorHora);
-            
-       
+class Empleado_PorHoras extends Empleado {
+    private int horasTrabajadas;
+    private double tarifaPorHora;
+
+    public Empleado_PorHoras(String nombre, double salarioBase, int horasTrabajadas, double tarifaPorHora) {
+        super(nombre, salarioBase);
+        this.horasTrabajadas = horasTrabajadas;
+        this.tarifaPorHora = tarifaPorHora;
     }
-      public void mostrarasalariado(int horasTrabajadas,double tarifaPorHora,String nombre,double salariobase,double salariototal ){
-          System.out.println("el nuero de horas trabajadas fueron"+horasTrabajadas);
-          System.out.println("la tarifa por horas fue de:  "+tarifaPorHora);
-          System.out.println("el nombre es: "+nombre  );
-          System.out.println("el salariobase fue de:  "+salariobase);
-          System.out.println("el salario total fue de "+salariototal);
-          
-      }
-       
+
+    public int getHorasTrabajadas() {
+        return horasTrabajadas;
+    }
+
+    public void setHorasTrabajadas(int horasTrabajadas) {
+        this.horasTrabajadas = horasTrabajadas;
+    }
+
+    public double getTarifaPorHora() {
+        return tarifaPorHora;
+    }
+
+    public void setTarifaPorHora(double tarifaPorHora) {
+        this.tarifaPorHora = tarifaPorHora;
+    }
+
+    @Override
+    public double calcularSalario() {
+        return getHorasTrabajadas() * getTarifaPorHora();
+    }
     
 }
