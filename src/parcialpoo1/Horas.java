@@ -1,11 +1,11 @@
 
-package parcialpoo1;
+package parcialuno;
 
-class Empleado_PorHoras extends Empleado {
+    class EmpleadoPorHoras extends Empleado {
     private int horasTrabajadas;
     private double tarifaPorHora;
 
-    public Empleado_PorHoras(String nombre, double salarioBase, int horasTrabajadas, double tarifaPorHora) {
+    public EmpleadoPorHoras(String nombre, double salarioBase, int horasTrabajadas, double tarifaPorHora) {
         super(nombre, salarioBase);
         this.horasTrabajadas = horasTrabajadas;
         this.tarifaPorHora = tarifaPorHora;
@@ -31,5 +31,4 @@ class Empleado_PorHoras extends Empleado {
     public double calcularSalario() {
         return getHorasTrabajadas() * getTarifaPorHora();
     }
-    
 }
