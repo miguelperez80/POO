@@ -1,11 +1,11 @@
+package parcialuno;
 
-package parcialpoo1;
 
 
-class Empleado_Asalariado extends Empleado {
+    class Asalariado extends Empleado {
     private double deducciones;
 
-    public Empleado_Asalariado(String nombre, double salarioBase, double deducciones) {
+    public Asalariado(String nombre, double salarioBase, double deducciones) {
         super(nombre, salarioBase);
         this.deducciones = deducciones;
     }
