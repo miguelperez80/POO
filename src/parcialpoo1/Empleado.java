@@ -2,41 +2,31 @@
 package parcialpoo1;
 
 
-public class Empleado 
-{
-  public String nombre;
-  public double salariobase;
+public abstract class Empleado {
+    
+    private String nombre;
+    private double salarioBase;
 
-    public Empleado(String nombre, double salariobase) 
-    {
+    public Empleado(String nombre, double salarioBase) {
         this.nombre = nombre;
-        this.salariobase = salariobase;
+        this.salarioBase = salarioBase;
     }
-  
-  
-    public void mostrarempleado (String nombre ,double salariobase ){
-        
-        for (int i=0; i<=10;i++){
-            System.out.println("el nombre del empleado"+i+" es:"+nombre);
-        System.out.println("el salario base del empleado"+i+"es:"+salariobase); 
-        } 
-       
+
+    public String getNombre() {
+        return nombre;
     }
-  
-    public void  calcularsalario(double deducciones,double salariomensual)
-    {
-      double salariototal=salariomensual-deducciones;
-        
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-   
-   
-    public void calcularsalario(int horasTrabajadas,double tarifaPorHora)
-    {
-       double salariototal=horasTrabajadas*tarifaPorHora;
-        
-     }
-          
-          
-          
-  
+
+    public double getSalarioBase() {
+        return salarioBase;
+    }
+
+    public void setSalarioBase(double salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    public abstract double calcularSalario();
 }
