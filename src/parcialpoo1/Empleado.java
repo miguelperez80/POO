@@ -1,5 +1,5 @@
 
-package parcialpoo1;
+package parcialuno;
 
 
 public abstract class Empleado {
