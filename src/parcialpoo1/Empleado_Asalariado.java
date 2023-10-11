@@ -2,22 +2,24 @@
 package parcialpoo1;
 
 
-public class Empleado_Asalariado {
- 
-    private  Empleado asalariado=new Empleado("jose",3500000);
+class Empleado_Asalariado extends Empleado {
+    private double deducciones;
 
-     public void mostrarempleado (String nombre,double salariobase,double deducciones,double salariototal){
-        System.out.println("el nombre del empleado es "+nombre);
-        System.out.println("el salario total del empleado es "+salariototal);
-    
-}
-   
-    
+    public Empleado_Asalariado(String nombre, double salarioBase, double deducciones) {
+        super(nombre, salarioBase);
+        this.deducciones = deducciones;
+    }
 
-    
-    
-    
-      
-    
-    
+    public double getDeducciones() {
+        return deducciones;
+    }
+
+    public void setDeducciones(double deducciones) {
+        this.deducciones = deducciones;
+    }
+
+    @Override
+    public double calcularSalario() {
+        return getSalarioBase() - deducciones;
+    }
 }
