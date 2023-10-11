@@ -56,7 +56,7 @@ public class Parcialuno {
             }
         }
 
-        // Obtener un empleado específico (por ejemplo, "Empleado7")
+        // Obtener un empleado específico (por ejemplo, "jose")
         String empleadoBuscado = "jose";
         for (Empleado empleado : empleados) {
             if (empleado.getNombre().equals(empleadoBuscado)) {
