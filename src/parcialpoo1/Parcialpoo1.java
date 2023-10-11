@@ -38,9 +38,9 @@ public class Parcialpoo1 {
 
         // Modificar el nombre o salario de un empleado 
         for (Empleado empleado : empleados) {
-            if (empleado.getNombre().equals("juan")) {
+            if (empleado.getNombre().equals("marta")) {
                 empleado.setNombre("juan Modificado");
-                empleado.setSalarioBase(2000000);
+                empleado.setSalarioBase(1000000);
             }
         }
 
@@ -51,10 +51,12 @@ public class Parcialpoo1 {
                 System.out.println(empleado.getNombre() + " - Salario: $" + empleado.calcularSalario());
             }
         }
+        
 
         // Obtener un empleado específico 
        
-        String empleadoBuscado = "jose";
+        //ejemplo 
+        String empleadoBuscado = "marta";
         for (Empleado empleado : empleados) {
             if (empleado.getNombre().equals(empleadoBuscado)) {
                 System.out.println("\nEmpleado especifico (" + empleadoBuscado + "):");
